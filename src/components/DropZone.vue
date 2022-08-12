@@ -7,6 +7,7 @@
     :class="{ 'active-dropzone': active }"
     class="dropzone"
   >
+    <img src="../assets/cloud.png" alt="" />
     <span>Drag & Drop your files here</span>
     <span>OR</span>
     <label for="dropzonefile">Browse Files</label>
@@ -38,17 +39,24 @@ export default {
 .dropzone {
   width: 400px;
   height: 200px;
+  margin: 0 30px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   row-gap: 16px;
-  border: 2px dashed #41b883;
+  border: 2px dashed #b3b3b4;
   background: rgb(248, 250, 254);
   transition: 0.3s ease all;
 
+  img {
+    width: 50px;
+    height: 50px;
+  }
+
   span {
-    color: rgb(192, 199, 222);
+    color: rgb(170, 179, 209);
+    font-weight: 700;
   }
 
   label {

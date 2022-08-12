@@ -1,9 +1,11 @@
 <template>
-  <div class="home">
-    <h1>UPLOAD FILES</h1>
-    <h3>Upload any document you want</h3>
-    <DropZone @drop.prevent="drop" @change="selectedFile" />
-    <span class="file-info">File: {{ dropzoneFile.name }}</span>
+  <div class="home-container">
+    <div class="home">
+      <h1>UPLOAD FILES</h1>
+      <h3>Upload any document you want</h3>
+      <DropZone @drop.prevent="drop" @change="selectedFile" />
+      <span class="file-info">File: {{ dropzoneFile.name }}</span>
+    </div>
   </div>
 </template>
 
@@ -33,13 +35,23 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-.home {
-  height: 100vh;
+.home-container {
+  background-color: rgb(116, 148, 236);
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: rgb(116, 148, 236);
+  height: 100vh;
+}
+
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 500px;
+  background-color: #fafbfd;
+  border-radius: 10px;
 
   h1 {
     color: rgb(214, 218, 229);
