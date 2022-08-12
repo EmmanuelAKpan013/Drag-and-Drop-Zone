@@ -7,9 +7,9 @@
     :class="{ 'active-dropzone': active }"
     class="dropzone"
   >
-    <span>Drag or Drop File</span>
+    <span>Drag & Drop your files here</span>
     <span>OR</span>
-    <label for="dropzonefile">Select File</label>
+    <label for="dropzonefile">Browse Files</label>
     <input type="file" id="dropzonefile" class="dropzonefile" />
   </div>
 </template>
@@ -49,8 +49,9 @@ export default {
 
   label {
     padding: 8px 12px;
+    border-radius: 8px;
     color: #fff;
-    background-color: #41b883;
+    background-color: rgb(88, 116, 198);
     transition: 0.3s ease all;
   }
 
