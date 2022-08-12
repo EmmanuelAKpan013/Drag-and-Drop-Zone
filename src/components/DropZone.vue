@@ -2,7 +2,7 @@
   <div
     @dragenter.prevent="toggleActive"
     @dragleave.prevent="toggleActive"
-    @dragover.prevent=""
+    @dragover.prevent
     @drop.prevent="toggleActive"
     :class="{ 'active-dropzone': active }"
     class="dropzone"
@@ -10,7 +10,7 @@
     <span>Drag or Drop File</span>
     <span>OR</span>
     <label for="dropzonefile">Select File</label>
-    <input type="file" id="dropzonefile" />
+    <input type="file" id="dropzonefile" class="dropzonefile" />
   </div>
 </template>
 
