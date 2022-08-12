@@ -58,4 +58,9 @@ export default {
     display: none;
   }
 }
+
+.active-dropzone {
+  color: #fff;
+  border-color: #fff;
+}
 </style>
