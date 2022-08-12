@@ -1,6 +1,7 @@
 <template>
   <div class="home">
-    <h1>DropZone</h1>
+    <h1>UPLOAD FILES</h1>
+    <h3>Upload any document you want</h3>
     <DropZone @drop.prevent="drop" @change="selectedFile" />
     <span class="file-info">File: {{ dropzoneFile.name }}</span>
   </div>
@@ -38,11 +39,16 @@ export default {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: #f1f1f1;
+  background-color: rgb(116, 148, 236);
 
   h1 {
+    color: rgb(214, 218, 229);
     font-size: 40px;
-    margin-bottom: 32px;
+    margin-bottom: 3px;
+  }
+
+  h3 {
+    margin: 5px 0 25px 0;
   }
 
   .file-info {
