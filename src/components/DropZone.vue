@@ -46,7 +46,7 @@ export default {
   align-items: center;
   row-gap: 16px;
   border: 2px dashed #b3b3b4;
-  background: rgb(248, 250, 254);
+  background: rgb(235, 235, 245);
   transition: 0.3s ease all;
 
   img {
