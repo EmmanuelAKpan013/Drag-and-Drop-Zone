@@ -44,8 +44,12 @@ export default {
   align-items: center;
   row-gap: 16px;
   border: 2px dashed #41b883;
-  background: #ffffff;
+  background: rgb(248, 250, 254);
   transition: 0.3s ease all;
+
+  span {
+    color: rgb(192, 199, 222);
+  }
 
   label {
     padding: 8px 12px;

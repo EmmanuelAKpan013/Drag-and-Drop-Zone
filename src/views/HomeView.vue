@@ -49,6 +49,7 @@ export default {
 
   h3 {
     margin: 5px 0 25px 0;
+    color: rgb(214, 218, 229);
   }
 
   .file-info {
