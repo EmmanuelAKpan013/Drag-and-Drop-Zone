@@ -54,14 +54,14 @@ export default {
   border-radius: 10px;
 
   h1 {
-    color: rgb(214, 218, 229);
+    color: rgb(193, 194, 196);
     font-size: 40px;
     margin-bottom: 3px;
   }
 
   h3 {
     margin: 5px 0 25px 0;
-    color: rgb(214, 218, 229);
+    color: rgb(193, 194, 196);
   }
 
   .file-info {

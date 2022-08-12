@@ -75,11 +75,11 @@ export default {
 .active-dropzone {
   color: #fff;
   border-color: #fff;
-  background-color: #41b883;
+  background-color: rgb(116, 148, 236);
 
   label {
     background-color: #fff;
-    color: #41b883;
+    color: rgb(116, 148, 236);
   }
 }
 </style>
