@@ -4,7 +4,18 @@
       <h1>UPLOAD FILES</h1>
       <h3>Upload any document you want</h3>
       <DropZone @drop.prevent="drop" @change="selectedFile" />
-      <span class="file-info">File: {{ dropzoneFile.name }}</span>
+
+      <div class="file-info">
+        <div class="file-type">{{ dropzoneFile.type }}</div>
+        <p file-name>{{ dropzoneFile.name }}</p>
+      </div>
+
+      <button class="upload">Upload</button>
+      <!-- <span class="file-info">
+        File Type: {{ dropzoneFile.type }}
+        <br />
+        File: {{ dropzoneFile.name }}</span
+      > -->
     </div>
   </div>
 </template>
@@ -23,7 +34,11 @@ export default {
     let dropzoneFile = ref("");
 
     const drop = (e) => {
+      console.log(dropzoneFile);
       dropzoneFile.value = e.dataTransfer.files[0];
+      console.log(dropzoneFile);
+
+      // console.log(e.dataTransfer);
     };
 
     const selectedFile = () => {
@@ -65,7 +80,31 @@ export default {
   }
 
   .file-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 20px;
     margin-top: 32px;
+
+    .file-type {
+      border-radius: 8px;
+      padding: 20px;
+      background: rgb(116, 148, 236);
+      color: #fff;
+    }
+  }
+
+  .upload {
+    margin-top: 35px;
+    border-radius: 10px;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    background: rgb(116, 148, 236);
+  }
+
+  .upload:hover {
+    background: rgb(165, 176, 209);
   }
 }
 </style>
