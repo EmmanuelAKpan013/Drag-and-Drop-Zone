@@ -6,8 +6,10 @@
       <DropZone @drop.prevent="drop" @change="selectedFile" />
 
       <div class="file-info">
-        <div class="file-type">{{ dropzoneFile.type }}</div>
-        <p file-name>{{ dropzoneFile.name }}</p>
+        <!-- <div class="file-type">{{ dropzoneFile.type }}</div> -->
+        <p v-for="(file, index) in dropzoneFile" :key="index">
+          {{ file.name }}
+        </p>
       </div>
 
       <button class="upload">Upload</button>
@@ -34,8 +36,10 @@ export default {
     let dropzoneFile = ref("");
 
     const drop = (e) => {
-      console.log(dropzoneFile);
-      dropzoneFile.value = e.dataTransfer.files[0];
+      console.log(e.dataTransfer);
+      dropzoneFile.value = e.dataTransfer.files;
+      // const [first, second] = dropzoneFile.value
+      console.log(dropzoneFile.value);
       console.log(dropzoneFile);
 
       // console.log(e.dataTransfer);
