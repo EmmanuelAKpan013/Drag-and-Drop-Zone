@@ -11,7 +11,7 @@
     <span>Drag & Drop your files here</span>
     <span>OR</span>
     <label for="dropzonefile">Browse Files</label>
-    <input type="file" id="dropzonefile" class="dropzonefile" />
+    <input multiple type="file" id="dropzonefile" class="dropzonefile" />
   </div>
 </template>
 
