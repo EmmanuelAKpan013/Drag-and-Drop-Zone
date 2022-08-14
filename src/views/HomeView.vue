@@ -7,9 +7,14 @@
 
       <div class="file-info">
         <!-- <div class="file-type">{{ dropzoneFile.type }}</div> -->
-        <p v-for="(file, index) in dropzoneFile" :key="index">
-          {{ file.name }}
-        </p>
+        <ul v-for="(file, index) in dropzoneFile" :key="index">
+          <li>
+            <div class="file-type">{{ file.type }}</div>
+            <div class="file-name">
+              {{ file.name }}
+            </div>
+          </li>
+        </ul>
       </div>
 
       <button class="upload">Upload</button>
@@ -68,14 +73,15 @@ export default {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 500px;
+  min-height: 500px;
+  max-height: 800px;
   background-color: #fafbfd;
   border-radius: 10px;
 
   h1 {
     color: rgb(193, 194, 196);
     font-size: 40px;
-    margin-bottom: 3px;
+    margin: 20px 0 3px 0;
   }
 
   h3 {
@@ -84,22 +90,39 @@ export default {
   }
 
   .file-info {
-    display: flex;
-    justify-content: center;
     align-items: center;
-    column-gap: 20px;
     margin-top: 32px;
 
-    .file-type {
-      border-radius: 8px;
-      padding: 20px;
-      background: rgb(116, 148, 236);
-      color: #fff;
+    ul {
+      display: flex;
+      flex-direction: column;
+      row-gap: 10px;
+      list-style: none;
+      // background: #bdcceb;
+
+      li {
+        display: flex;
+        column-gap: 20px;
+        margin: 8px 0;
+
+        .file-type {
+          border-radius: 8px;
+          padding: 10px;
+          background: rgb(116, 148, 236);
+          color: #fff;
+        }
+
+        .file-name {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
     }
   }
 
   .upload {
-    margin-top: 35px;
+    margin: 25px 0 20px 0;
     border-radius: 10px;
     border: none;
     color: #fff;
