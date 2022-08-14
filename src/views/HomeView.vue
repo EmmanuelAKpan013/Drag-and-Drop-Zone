@@ -89,7 +89,6 @@ export default {
       flex-direction: column;
       row-gap: 10px;
       list-style: none;
-      // background: #bdcceb;
 
       li {
         display: flex;
