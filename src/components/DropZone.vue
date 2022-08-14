@@ -67,6 +67,10 @@ export default {
     transition: 0.3s ease all;
   }
 
+  label:hover {
+    background-color: rgb(132, 152, 212);
+  }
+
   input {
     display: none;
   }
